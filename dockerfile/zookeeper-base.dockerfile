@@ -10,7 +10,7 @@ RUN mkdir /logs && groupadd -r usergroup && useradd -r -g usergroup user && chow
 
 
 COPY config /config
-ADD  certs/certs.tar.gz /
+ADD  certs /certs
 COPY distrib/jmx_prometheus_javaagent-0.12.0.jar /distrib/
 
 ADD distrib/apache-zookeeper-$ZOOKEEPER_VERSION-bin.tar.gz /distrib

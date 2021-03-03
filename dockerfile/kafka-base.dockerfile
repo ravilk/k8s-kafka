@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y sudo dnsutils
 RUN mkdir /logs && groupadd -r usergroup && useradd -r -g usergroup user && chown -R user:usergroup /logs && adduser user sudo
 
 COPY config /config
-ADD  certs/certs.tar.gz /
+ADD  certs /certs
 COPY distrib/jmx_prometheus_javaagent-0.12.0.jar /distrib/
 
 ADD distrib/kafka_$KAFKA_VERSION.tgz /distrib
