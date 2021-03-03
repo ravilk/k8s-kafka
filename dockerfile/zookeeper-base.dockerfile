@@ -4,7 +4,7 @@ ARG ZOOKEEPER_VERSION=3.5.7
 
 # Must have packages
 # RUN sudo apt-get update && apt-get install -y vim nano zsh curl git sudo dnsutils
-RUN apt-get install -y sudo dnsutils
+RUN apt-get update && apt-get install -y sudo dnsutils
 
 RUN mkdir /logs && groupadd -r usergroup && useradd -r -g usergroup user && chown -R user:usergroup /logs && adduser user sudo
 
