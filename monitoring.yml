@@ -22,11 +22,11 @@
       shell: "kubectl create --filename grafana-svc.yaml"
       environment:
         KUBECONFIG: /home/vagrant/.kube/config
-      register: create_grafana
+      register: create_grafana_service
 
-    - name: Debug create_grafana
+    - name: Debug create_grafana_service
       debug: 
-        var: create_grafana
+        var: create_grafana_service
 
     - name: Run kubectl create --filename jmx-exporter-servicemonitor.yaml
       become: yes
