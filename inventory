@@ -1,0 +1,14 @@
+[master]
+10.244.0.1
+
+[vagrant:children]
+master
+
+[vagrant:vars]
+ansible_connection = ssh
+ansible_user = vagrant
+ansible_ssh_pass = vagrant
+host_key_checking = False
+
+[vagrant:vars]
+ansible_python_interpreter=/usr/bin/python3

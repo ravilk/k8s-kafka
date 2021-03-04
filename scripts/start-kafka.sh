@@ -16,9 +16,9 @@ export KAFKA_HEAP_OPTS="
 "
 export KAFKA_OPTS="
 -Dzookeeper.client.secure=true
--Dzookeeper.ssl.keyStore.location=$HOSTNAME.jks
+-Dzookeeper.ssl.keyStore.location=/certs/$HOSTNAME.jks
 -Dzookeeper.ssl.keyStore.password=kafkapilot
--Dzookeeper.ssl.trustStore.location=kafkaCA-trusted.jks
+-Dzookeeper.ssl.trustStore.location=/certs/kafkaCA-trusted.jks
 -Dzookeeper.ssl.trustStore.password=kafkapilot
 -Dzookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty
 -javaagent:/distrib/jmx_prometheus_javaagent-0.12.0.jar=7171:/config/jmx_exporter_kafka.yaml

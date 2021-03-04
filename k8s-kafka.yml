@@ -1,0 +1,64 @@
+---
+- name: kafka
+  hosts: master
+  gather_facts: no
+ 
+  vars:
+    ansible_become_pass: "vagrant"
+
+  tasks:
+    - name: Copy .yml files to k8s master
+      copy: 
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        owner: vagrant
+        group: vagrant
+      with_items:
+        - { src: "statefulset/zookeeper-statefulset.yaml", dest: "/home/vagrant/zookeeper-statefulset.yaml" }
+        - { src: "service/zookeeper-svc.yaml", dest: "/home/vagrant/zookeeper-svc.yaml" }
+        - { src: "service/kafka-svc.yaml", dest: "/home/vagrant/kafka-svc.yaml" }
+        - { src: "statefulset/kafka-statefulset.yaml", dest: "/home/vagrant/kafka-statefulset.yaml" }
+
+    - name: Run kubectl create --filename zookeeper-statefulset.yaml
+      become: yes
+      shell: "kubectl create --filename zookeeper-statefulset.yaml"
+      environment:
+        KUBECONFIG: /home/vagrant/.kube/config
+      register: create_zookeeper_statefulset
+
+    - name: Debug create_zookeeper_statefulset
+      debug: 
+        var: create_zookeeper_statefulset
+
+    - name: Run kubectl create --filename zookeeper-svc.yaml
+      become: yes
+      shell: "kubectl create --filename zookeeper-svc.yaml"
+      environment:
+        KUBECONFIG: /home/vagrant/.kube/config
+      register: create_zookeeper_service
+
+    - name: Debug create_zookeeper_service
+      debug: 
+        var: create_zookeeper_service
+
+    - name: Run kubectl create --filename kafka-svc.yaml
+      become: yes
+      shell: "kubectl create --filename kafka-svc.yaml"
+      environment:
+        KUBECONFIG: /home/vagrant/.kube/config
+      register: create_kafka_service
+
+    - name: Debug create_kafka_service
+      debug: 
+        var: create_kafka_service
+
+    - name: Run kubectl create --filename kafka-statefulset.yaml
+      become: yes
+      shell: "kubectl create --filename kafka-statefulset.yaml"
+      environment:
+        KUBECONFIG: /home/vagrant/.kube/config
+      register: create_kafka_cluster
+
+    - name: Debug create_kafka_cluster
+      debug: 
+        var: create_kafka_cluster
