@@ -2,7 +2,7 @@
 10.244.0.1
 
 [vagrant:children]
-k8s
+master
 
 [vagrant:vars]
 ansible_connection = ssh

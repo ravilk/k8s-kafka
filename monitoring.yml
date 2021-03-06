@@ -14,27 +14,15 @@
         owner: vagrant
         group: vagrant
       with_items:
-        - { src: "service/grafana-svc.yaml", dest: "/home/vagrant/grafana-svc.yaml" }
         - { src: "servicemonitor/jmx-exporter-servicemonitor.yaml", dest: "/home/vagrant/jmx-exporter-servicemonitor.yaml" }
-
-    - name: Run kubectl create --filename grafana-svc.yaml
-      become: yes
-      shell: "kubectl create --filename grafana-svc.yaml"
-      environment:
-        KUBECONFIG: /home/vagrant/.kube/config
-      register: create_grafana_service
-
-    - name: Debug create_grafana_service
-      debug: 
-        var: create_grafana_service
 
     - name: Run kubectl create --filename jmx-exporter-servicemonitor.yaml
       become: yes
       shell: "kubectl create --filename jmx-exporter-servicemonitor.yaml"
       environment:
         KUBECONFIG: /home/vagrant/.kube/config
-      register: create_jmx-exporter-servicemonitor
+      register: create_jmx_exporter_servicemonitor
 
-    - name: Debug create_jmx-exporter-servicemonitor
+    - name: Debug create_jmx_exporter_servicemonitor
       debug: 
-        var: create_jmx-exporter-servicemonitor
+        var: create_jmx_exporter_servicemonitor
