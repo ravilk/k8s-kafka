@@ -1,0 +1,1133 @@
+2021-03-06 04:23:33,768 p=11869 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/k8s-kafka/inventory with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we got from each: JSON: No JSON object could be decoded
+Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in '/home/vagrant/k8s-kafka/inventory': line 2, column 1, but may be elsewhere in the file depending on the
+exact syntax problem.  The offending line appears to be:  [master] 10.244.0.1 ^ here
+
+2021-03-06 04:23:33,771 p=11869 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/k8s-kafka/inventory with ini plugin: /home/vagrant/k8s-kafka/inventory:5: Section [vagrant:children] includes undefined group: k8s
+
+2021-03-06 04:23:33,771 p=11869 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/k8s-kafka/inventory as an inventory source
+
+2021-03-06 04:23:33,772 p=11869 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-03-06 04:23:33,774 p=11869 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-03-06 04:23:34,606 p=11869 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:23:34,653 p=11869 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:23:34,902 p=11869 u=vagrant n=ansible | failed: [10.244.0.1] (item={u'dest': u'/home/vagrant/grafana-svc.yaml', u'src': u'service/grafana-svc.yaml'}) => {"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/grafana-svc.yaml", "src": "service/grafana-svc.yaml"}, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '10.244.0.1' (ECDSA) to the list of known hosts.\r\nvagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}
+2021-03-06 04:23:35,050 p=11869 u=vagrant n=ansible | failed: [10.244.0.1] (item={u'dest': u'/home/vagrant/jmx-exporter-servicemonitor.yaml', u'src': u'servicemonitor/jmx-exporter-servicemonitor.yaml'}) => {"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/jmx-exporter-servicemonitor.yaml", "src": "servicemonitor/jmx-exporter-servicemonitor.yaml"}, "msg": "Failed to connect to the host via ssh: vagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}
+2021-03-06 04:23:35,056 p=11869 u=vagrant n=ansible | fatal: [10.244.0.1]: UNREACHABLE! => {"changed": false, "msg": "All items completed", "results": [{"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/grafana-svc.yaml", "src": "service/grafana-svc.yaml"}, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '10.244.0.1' (ECDSA) to the list of known hosts.\r\nvagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}, {"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/jmx-exporter-servicemonitor.yaml", "src": "servicemonitor/jmx-exporter-servicemonitor.yaml"}, "msg": "Failed to connect to the host via ssh: vagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}]}
+2021-03-06 04:23:35,058 p=11869 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:23:35,059 p=11869 u=vagrant n=ansible | 10.244.0.1                 : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 04:25:08,884 p=12701 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/k8s-kafka/inventory with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we got from each: JSON: No JSON object could be decoded
+Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in '/home/vagrant/k8s-kafka/inventory': line 2, column 1, but may be elsewhere in the file depending on the
+exact syntax problem.  The offending line appears to be:  [master] 10.244.0.1 ^ here
+
+2021-03-06 04:25:08,886 p=12701 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/k8s-kafka/inventory with ini plugin: /home/vagrant/k8s-kafka/inventory:5: Section [vagrant:children] includes undefined group: k8s
+
+2021-03-06 04:25:08,887 p=12701 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/k8s-kafka/inventory as an inventory source
+
+2021-03-06 04:25:08,888 p=12701 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-03-06 04:25:08,889 p=12701 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-03-06 04:25:09,560 p=12701 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:25:09,615 p=12701 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:25:09,841 p=12701 u=vagrant n=ansible | failed: [10.244.0.1] (item={u'dest': u'/home/vagrant/grafana-svc.yaml', u'src': u'service/grafana-svc.yaml'}) => {"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/grafana-svc.yaml", "src": "service/grafana-svc.yaml"}, "msg": "Failed to connect to the host via ssh: vagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}
+2021-03-06 04:25:09,985 p=12701 u=vagrant n=ansible | failed: [10.244.0.1] (item={u'dest': u'/home/vagrant/jmx-exporter-servicemonitor.yaml', u'src': u'servicemonitor/jmx-exporter-servicemonitor.yaml'}) => {"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/jmx-exporter-servicemonitor.yaml", "src": "servicemonitor/jmx-exporter-servicemonitor.yaml"}, "msg": "Failed to connect to the host via ssh: vagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}
+2021-03-06 04:25:09,991 p=12701 u=vagrant n=ansible | fatal: [10.244.0.1]: UNREACHABLE! => {"changed": false, "msg": "All items completed", "results": [{"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/grafana-svc.yaml", "src": "service/grafana-svc.yaml"}, "msg": "Failed to connect to the host via ssh: vagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}, {"ansible_loop_var": "item", "item": {"dest": "/home/vagrant/jmx-exporter-servicemonitor.yaml", "src": "servicemonitor/jmx-exporter-servicemonitor.yaml"}, "msg": "Failed to connect to the host via ssh: vagrant@10.244.0.1: Permission denied (publickey,password).", "unreachable": true}]}
+2021-03-06 04:25:09,994 p=12701 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:25:09,994 p=12701 u=vagrant n=ansible | 10.244.0.1                 : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 04:25:50,259 p=13055 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:25:50,305 p=13055 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:25:56,015 p=13055 u=vagrant n=ansible | changed: [10.244.0.1] => (item={u'dest': u'/home/vagrant/grafana-svc.yaml', u'src': u'service/grafana-svc.yaml'})
+2021-03-06 04:25:57,735 p=13055 u=vagrant n=ansible | changed: [10.244.0.1] => (item={u'dest': u'/home/vagrant/jmx-exporter-servicemonitor.yaml', u'src': u'servicemonitor/jmx-exporter-servicemonitor.yaml'})
+2021-03-06 04:25:57,755 p=13055 u=vagrant n=ansible | TASK [Run kubectl create --filename grafana-svc.yaml] ***********************************************************************************************************************************************************
+2021-03-06 04:26:02,989 p=13055 u=vagrant n=ansible | fatal: [10.244.0.1]: FAILED! => {"changed": true, "cmd": "kubectl create --filename grafana-svc.yaml", "delta": "0:00:03.266173", "end": "2021-03-06 04:26:02.881367", "msg": "non-zero return code", "rc": 1, "start": "2021-03-06 04:25:59.615194", "stderr": "Error from server (AlreadyExists): error when creating \"grafana-svc.yaml\": services \"grafana\" already exists", "stderr_lines": ["Error from server (AlreadyExists): error when creating \"grafana-svc.yaml\": services \"grafana\" already exists"], "stdout": "", "stdout_lines": []}
+2021-03-06 04:26:02,993 p=13055 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:26:02,993 p=13055 u=vagrant n=ansible | 10.244.0.1                 : ok=1    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-03-06 04:28:29,383 p=14785 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:28:29,426 p=14785 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:28:35,961 p=14785 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/jmx-exporter-servicemonitor.yaml', u'src': u'servicemonitor/jmx-exporter-servicemonitor.yaml'})
+2021-03-06 04:28:35,985 p=14785 u=vagrant n=ansible | TASK [Run kubectl create --filename jmx-exporter-servicemonitor.yaml] *******************************************************************************************************************************************
+2021-03-06 04:28:38,613 p=14785 u=vagrant n=ansible | fatal: [10.244.0.1]: FAILED! => {"msg": "Invalid variable name in 'register' specified: 'create_jmx-exporter-servicemonitor'"}
+2021-03-06 04:28:38,617 p=14785 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:28:38,618 p=14785 u=vagrant n=ansible | 10.244.0.1                 : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-03-06 04:35:18,897 p=18418 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:35:18,947 p=18418 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:35:25,705 p=18418 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/jmx-exporter-servicemonitor.yaml', u'src': u'servicemonitor/jmx-exporter-servicemonitor.yaml'})
+2021-03-06 04:35:25,720 p=18418 u=vagrant n=ansible | TASK [Run kubectl create --filename jmx-exporter-servicemonitor.yaml] *******************************************************************************************************************************************
+2021-03-06 04:35:28,405 p=18418 u=vagrant n=ansible | fatal: [10.244.0.1]: FAILED! => {"msg": "Invalid variable name in 'register' specified: 'create_jmx-exporter-servicemonitor'"}
+2021-03-06 04:35:28,411 p=18418 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:35:28,413 p=18418 u=vagrant n=ansible | 10.244.0.1                 : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-03-06 04:35:58,084 p=18936 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:35:58,153 p=18936 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:36:02,595 p=18936 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/jmx-exporter-servicemonitor.yaml', u'src': u'servicemonitor/jmx-exporter-servicemonitor.yaml'})
+2021-03-06 04:36:02,613 p=18936 u=vagrant n=ansible | TASK [Run kubectl create --filename jmx-exporter-servicemonitor.yaml] *******************************************************************************************************************************************
+2021-03-06 04:36:06,963 p=18936 u=vagrant n=ansible | fatal: [10.244.0.1]: FAILED! => {"msg": "Invalid variable name in 'register' specified: 'create_jmx-exporter-servicemonitor'"}
+2021-03-06 04:36:06,966 p=18936 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:36:06,967 p=18936 u=vagrant n=ansible | 10.244.0.1                 : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-03-06 04:36:38,426 p=19365 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:36:38,473 p=19365 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:36:41,810 p=19365 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/jmx-exporter-servicemonitor.yaml', u'src': u'servicemonitor/jmx-exporter-servicemonitor.yaml'})
+2021-03-06 04:36:41,830 p=19365 u=vagrant n=ansible | TASK [Run kubectl create --filename jmx-exporter-servicemonitor.yaml] *******************************************************************************************************************************************
+2021-03-06 04:36:45,574 p=19365 u=vagrant n=ansible | fatal: [10.244.0.1]: FAILED! => {"changed": true, "cmd": "kubectl create --filename jmx-exporter-servicemonitor.yaml", "delta": "0:00:01.374602", "end": "2021-03-06 04:36:45.459491", "msg": "non-zero return code", "rc": 1, "start": "2021-03-06 04:36:44.084889", "stderr": "Error from server (AlreadyExists): error when creating \"jmx-exporter-servicemonitor.yaml\": servicemonitors.monitoring.coreos.com \"jmxexporter\" already exists", "stderr_lines": ["Error from server (AlreadyExists): error when creating \"jmx-exporter-servicemonitor.yaml\": servicemonitors.monitoring.coreos.com \"jmxexporter\" already exists"], "stdout": "", "stdout_lines": []}
+2021-03-06 04:36:45,578 p=19365 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:36:45,579 p=19365 u=vagrant n=ansible | 10.244.0.1                 : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-03-06 04:49:03,182 p=25575 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 04:49:03,228 p=25575 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 04:49:08,803 p=25575 u=vagrant n=ansible | changed: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 04:49:10,595 p=25575 u=vagrant n=ansible | changed: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 04:49:12,981 p=25575 u=vagrant n=ansible | changed: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 04:49:14,822 p=25575 u=vagrant n=ansible | changed: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 04:49:14,849 p=25575 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 04:49:18,587 p=25575 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 04:49:18,598 p=25575 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 04:49:18,680 p=25575 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:01.776566", 
+        "end": "2021-03-06 04:49:18.395976", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 04:49:16.619410", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 04:49:18,689 p=25575 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 04:49:21,206 p=25575 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 04:49:21,217 p=25575 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 04:49:21,314 p=25575 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.911924", 
+        "end": "2021-03-06 04:49:21.013738", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 04:49:20.101814", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 04:49:21,324 p=25575 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 04:49:24,496 p=25575 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 04:49:24,532 p=25575 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 04:49:24,649 p=25575 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:01.469473", 
+        "end": "2021-03-06 04:49:24.285267", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 04:49:22.815794", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 04:49:24,671 p=25575 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 04:49:27,664 p=25575 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 04:49:27,689 p=25575 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 04:49:27,818 p=25575 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:01.102925", 
+        "end": "2021-03-06 04:49:27.353315", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 04:49:26.250390", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 04:49:27,828 p=25575 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 04:49:27,829 p=25575 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 05:15:34,265 p=18927 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 05:15:34,307 p=18927 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 05:15:40,059 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 05:15:41,872 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 05:15:44,158 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 05:15:46,096 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 05:15:46,125 p=18927 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 05:15:50,756 p=18927 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:15:50,768 p=18927 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 05:15:50,872 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:02.699606", 
+        "end": "2021-03-06 05:15:50.568589", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:15:47.868983", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 05:15:50,881 p=18927 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 05:15:53,021 p=18927 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:15:53,039 p=18927 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 05:15:53,158 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.820445", 
+        "end": "2021-03-06 05:15:52.856930", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:15:52.036485", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 05:15:53,177 p=18927 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 05:15:56,064 p=18927 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:15:56,077 p=18927 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 05:15:56,229 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:01.272160", 
+        "end": "2021-03-06 05:15:55.917487", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:15:54.645327", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 05:15:56,255 p=18927 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 05:15:59,774 p=18927 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:15:59,805 p=18927 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 05:15:59,998 p=18927 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:01.545481", 
+        "end": "2021-03-06 05:15:59.451611", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:15:57.906130", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 05:16:00,017 p=18927 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 05:16:00,018 p=18927 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 05:33:54,730 p=3599 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 05:33:54,779 p=3599 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 05:34:00,699 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 05:34:02,894 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 05:34:04,762 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 05:34:07,033 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 05:34:07,062 p=3599 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 05:34:10,823 p=3599 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:34:10,833 p=3599 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 05:34:10,912 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:01.727431", 
+        "end": "2021-03-06 05:34:10.640509", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:34:08.913078", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 05:34:10,923 p=3599 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 05:34:13,979 p=3599 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:34:13,992 p=3599 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 05:34:14,102 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:01.680163", 
+        "end": "2021-03-06 05:34:13.820260", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:34:12.140097", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 05:34:14,115 p=3599 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 05:34:16,927 p=3599 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:34:16,956 p=3599 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 05:34:17,117 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:01.019792", 
+        "end": "2021-03-06 05:34:16.645014", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:34:15.625222", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 05:34:17,146 p=3599 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 05:34:19,964 p=3599 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:34:19,982 p=3599 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 05:34:20,141 p=3599 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:01.107061", 
+        "end": "2021-03-06 05:34:19.741200", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:34:18.634139", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 05:34:20,217 p=3599 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 05:34:20,218 p=3599 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 05:54:49,804 p=22386 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 05:54:49,861 p=22386 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 05:54:56,245 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 05:54:58,036 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 05:55:00,516 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 05:55:03,335 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 05:55:03,361 p=22386 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 05:55:07,580 p=22386 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:55:07,590 p=22386 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 05:55:07,751 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:02.184554", 
+        "end": "2021-03-06 05:55:07.462230", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:55:05.277676", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 05:55:07,771 p=22386 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 05:55:10,863 p=22386 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:55:10,878 p=22386 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 05:55:11,021 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:01.598876", 
+        "end": "2021-03-06 05:55:10.685240", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:55:09.086364", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 05:55:11,030 p=22386 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 05:55:13,983 p=22386 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:55:14,003 p=22386 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 05:55:14,113 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:01.106570", 
+        "end": "2021-03-06 05:55:13.827729", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:55:12.721159", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 05:55:14,141 p=22386 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 05:55:17,089 p=22386 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 05:55:17,111 p=22386 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 05:55:17,324 p=22386 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:01.195349", 
+        "end": "2021-03-06 05:55:16.773304", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 05:55:15.577955", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 05:55:17,349 p=22386 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 05:55:17,350 p=22386 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 06:08:55,735 p=5697 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 06:08:55,756 p=5697 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 06:08:58,226 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 06:08:59,350 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 06:08:59,969 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 06:09:00,585 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 06:09:00,593 p=5697 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 06:09:03,388 p=5697 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:09:03,392 p=5697 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 06:09:03,432 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:02.139371", 
+        "end": "2021-03-06 06:09:03.320224", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:09:01.180853", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 06:09:03,437 p=5697 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 06:09:04,162 p=5697 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:09:04,166 p=5697 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 06:09:04,203 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.288202", 
+        "end": "2021-03-06 06:09:04.118797", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:09:03.830595", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 06:09:04,207 p=5697 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 06:09:05,052 p=5697 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:09:05,056 p=5697 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 06:09:05,095 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:00.346172", 
+        "end": "2021-03-06 06:09:04.985702", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:09:04.639530", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 06:09:05,099 p=5697 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 06:09:06,910 p=5697 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:09:06,914 p=5697 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 06:09:06,969 p=5697 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:00.357555", 
+        "end": "2021-03-06 06:09:06.314180", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:09:05.956625", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 06:09:06,973 p=5697 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 06:09:06,973 p=5697 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 06:28:30,433 p=18579 u=vagrant n=ansible | ERROR! the playbook: k8s-kafka.y could not be found
+2021-03-06 06:28:36,010 p=18613 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 06:28:36,028 p=18613 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 06:28:38,444 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 06:28:39,524 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 06:28:40,122 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 06:28:41,213 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 06:28:41,223 p=18613 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 06:28:43,697 p=18613 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:28:43,706 p=18613 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 06:28:43,736 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:01.819755", 
+        "end": "2021-03-06 06:28:43.614034", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:28:41.794279", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 06:28:43,748 p=18613 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 06:28:44,460 p=18613 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:28:44,466 p=18613 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 06:28:44,511 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.258568", 
+        "end": "2021-03-06 06:28:44.402424", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:28:44.143856", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 06:28:44,522 p=18613 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 06:28:45,717 p=18613 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:28:45,721 p=18613 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 06:28:45,751 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:00.290797", 
+        "end": "2021-03-06 06:28:45.670146", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:28:45.379349", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 06:28:45,756 p=18613 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 06:28:46,582 p=18613 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:28:46,593 p=18613 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 06:28:46,674 p=18613 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:00.339897", 
+        "end": "2021-03-06 06:28:46.500539", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:28:46.160642", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 06:28:46,680 p=18613 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 06:28:46,680 p=18613 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 06:39:11,214 p=1650 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 06:39:11,230 p=1650 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 06:39:14,269 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 06:39:14,871 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 06:39:15,452 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 06:39:16,401 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 06:39:16,410 p=1650 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 06:39:18,326 p=1650 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:39:18,333 p=1650 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 06:39:18,364 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:01.219814", 
+        "end": "2021-03-06 06:39:18.257785", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:39:17.037971", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 06:39:18,368 p=1650 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 06:39:19,117 p=1650 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:39:19,122 p=1650 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 06:39:19,180 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.261211", 
+        "end": "2021-03-06 06:39:19.061446", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:39:18.800235", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 06:39:19,185 p=1650 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 06:39:21,006 p=1650 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:39:21,011 p=1650 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 06:39:21,070 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:01.339519", 
+        "end": "2021-03-06 06:39:20.954798", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:39:19.615279", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 06:39:21,076 p=1650 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 06:39:22,030 p=1650 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 06:39:22,034 p=1650 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 06:39:22,100 p=1650 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:00.399274", 
+        "end": "2021-03-06 06:39:21.950683", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 06:39:21.551409", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 06:39:22,103 p=1650 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 06:39:22,103 p=1650 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 08:31:05,500 p=3676 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 08:31:05,516 p=3676 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 08:31:07,613 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 08:31:08,316 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 08:31:08,971 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 08:31:09,603 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 08:31:09,610 p=3676 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 08:31:12,465 p=3676 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 08:31:12,471 p=3676 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 08:31:12,516 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:02.192567", 
+        "end": "2021-03-06 08:31:12.389794", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 08:31:10.197227", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 08:31:12,522 p=3676 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 08:31:13,240 p=3676 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 08:31:13,244 p=3676 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 08:31:13,279 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.239481", 
+        "end": "2021-03-06 08:31:13.188614", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 08:31:12.949133", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 08:31:13,287 p=3676 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 08:31:14,339 p=3676 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 08:31:14,344 p=3676 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 08:31:14,377 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:00.595613", 
+        "end": "2021-03-06 08:31:14.287699", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 08:31:13.692086", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 08:31:14,381 p=3676 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 08:31:15,207 p=3676 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 08:31:15,211 p=3676 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 08:31:15,251 p=3676 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:00.344726", 
+        "end": "2021-03-06 08:31:15.132669", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 08:31:14.787943", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 08:31:15,278 p=3676 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 08:31:15,278 p=3676 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 09:23:29,942 p=15984 u=vagrant n=ansible |  [ERROR]: User interrupted execution
+
+2021-03-06 09:23:35,151 p=16019 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 09:23:35,192 p=16019 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 09:23:41,273 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 09:23:43,442 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 09:23:45,544 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 09:23:47,470 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 09:23:47,502 p=16019 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 09:23:51,325 p=16019 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:23:51,336 p=16019 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 09:23:51,428 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:01.718326", 
+        "end": "2021-03-06 09:23:51.129742", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:23:49.411416", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 09:23:51,437 p=16019 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 09:23:53,763 p=16019 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:23:53,778 p=16019 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 09:23:53,879 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.929053", 
+        "end": "2021-03-06 09:23:53.609975", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:23:52.680922", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 09:23:53,891 p=16019 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 09:23:56,740 p=16019 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:23:56,762 p=16019 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 09:23:56,883 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:01.129623", 
+        "end": "2021-03-06 09:23:56.549170", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:23:55.419547", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 09:23:56,906 p=16019 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 09:24:00,524 p=16019 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:24:00,547 p=16019 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 09:24:00,823 p=16019 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:01.509960", 
+        "end": "2021-03-06 09:24:00.322856", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:23:58.812896", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 09:24:00,854 p=16019 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 09:24:00,860 p=16019 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 09:51:39,165 p=9517 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 09:51:39,215 p=9517 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 09:51:45,640 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 09:51:47,555 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 09:51:50,459 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 09:51:52,494 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 09:51:52,525 p=9517 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 09:51:56,983 p=9517 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:51:57,005 p=9517 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 09:51:57,090 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:02.404106", 
+        "end": "2021-03-06 09:51:56.808990", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:51:54.404884", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 09:51:57,099 p=9517 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 09:52:00,308 p=9517 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:52:00,325 p=9517 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 09:52:00,420 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:01.809948", 
+        "end": "2021-03-06 09:52:00.155545", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:51:58.345597", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 09:52:00,431 p=9517 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 09:52:03,498 p=9517 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:52:03,528 p=9517 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 09:52:03,645 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:01.301749", 
+        "end": "2021-03-06 09:52:03.200190", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:52:01.898441", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 09:52:03,682 p=9517 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 09:52:07,168 p=9517 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 09:52:07,211 p=9517 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 09:52:07,343 p=9517 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:01.503304", 
+        "end": "2021-03-06 09:52:06.912920", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 09:52:05.409616", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 09:52:07,357 p=9517 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 09:52:07,358 p=9517 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 17:15:07,843 p=19148 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 17:15:07,860 p=19148 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 17:15:10,350 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 17:15:11,051 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 17:15:11,719 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 17:15:12,862 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 17:15:12,876 p=19148 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 17:15:15,619 p=19148 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:15:15,630 p=19148 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 17:15:15,668 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:01.367654", 
+        "end": "2021-03-06 17:15:15.109752", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:15:13.742098", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 17:15:15,682 p=19148 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 17:15:16,530 p=19148 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:15:16,534 p=19148 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 17:15:16,567 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.315948", 
+        "end": "2021-03-06 17:15:16.462712", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:15:16.146764", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 17:15:16,573 p=19148 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 17:15:17,378 p=19148 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:15:17,382 p=19148 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 17:15:17,416 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:00.284534", 
+        "end": "2021-03-06 17:15:17.259956", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:15:16.975422", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 17:15:17,420 p=19148 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 17:15:18,897 p=19148 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:15:18,902 p=19148 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 17:15:18,942 p=19148 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:00.946614", 
+        "end": "2021-03-06 17:15:18.843339", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:15:17.896725", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 17:15:18,945 p=19148 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 17:15:18,947 p=19148 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-03-06 17:29:51,577 p=1133 u=vagrant n=ansible | PLAY [kafka] ****************************************************************************************************************************************************************************************************
+2021-03-06 17:29:51,598 p=1133 u=vagrant n=ansible | TASK [Copy .yml files to k8s master] ****************************************************************************************************************************************************************************
+2021-03-06 17:29:54,580 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-statefulset.yaml', u'src': u'statefulset/zookeeper-statefulset.yaml'})
+2021-03-06 17:29:55,190 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/zookeeper-svc.yaml', u'src': u'service/zookeeper-svc.yaml'})
+2021-03-06 17:29:56,337 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-svc.yaml', u'src': u'service/kafka-svc.yaml'})
+2021-03-06 17:29:57,393 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => (item={u'dest': u'/home/vagrant/kafka-statefulset.yaml', u'src': u'statefulset/kafka-statefulset.yaml'})
+2021-03-06 17:29:57,402 p=1133 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-statefulset.yaml] *************************************************************************************************************************************************
+2021-03-06 17:29:59,248 p=1133 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:29:59,253 p=1133 u=vagrant n=ansible | TASK [Debug create_zookeeper_statefulset] ***********************************************************************************************************************************************************************
+2021-03-06 17:29:59,288 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_statefulset": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-statefulset.yaml", 
+        "delta": "0:00:01.183873", 
+        "end": "2021-03-06 17:29:59.182988", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:29:57.999115", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/zookeeper created", 
+        "stdout_lines": [
+            "statefulset.apps/zookeeper created"
+        ]
+    }
+}
+2021-03-06 17:29:59,293 p=1133 u=vagrant n=ansible | TASK [Run kubectl create --filename zookeeper-svc.yaml] *********************************************************************************************************************************************************
+2021-03-06 17:30:00,622 p=1133 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:30:00,630 p=1133 u=vagrant n=ansible | TASK [Debug create_zookeeper_service] ***************************************************************************************************************************************************************************
+2021-03-06 17:30:00,668 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-svc.yaml", 
+        "delta": "0:00:00.866817", 
+        "end": "2021-03-06 17:30:00.561354", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:29:59.694537", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zookeeper created", 
+        "stdout_lines": [
+            "service/zookeeper created"
+        ]
+    }
+}
+2021-03-06 17:30:00,673 p=1133 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-svc.yaml] *************************************************************************************************************************************************************
+2021-03-06 17:30:02,415 p=1133 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:30:02,422 p=1133 u=vagrant n=ansible | TASK [Debug create_kafka_service] *******************************************************************************************************************************************************************************
+2021-03-06 17:30:02,459 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-svc.yaml", 
+        "delta": "0:00:00.732307", 
+        "end": "2021-03-06 17:30:02.367938", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:30:01.635631", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka created", 
+        "stdout_lines": [
+            "service/kafka created"
+        ]
+    }
+}
+2021-03-06 17:30:02,464 p=1133 u=vagrant n=ansible | TASK [Run kubectl create --filename kafka-statefulset.yaml] *****************************************************************************************************************************************************
+2021-03-06 17:30:03,276 p=1133 u=vagrant n=ansible | changed: [10.244.0.1]
+2021-03-06 17:30:03,281 p=1133 u=vagrant n=ansible | TASK [Debug create_kafka_cluster] *******************************************************************************************************************************************************************************
+2021-03-06 17:30:03,317 p=1133 u=vagrant n=ansible | ok: [10.244.0.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-statefulset.yaml", 
+        "delta": "0:00:00.308354", 
+        "end": "2021-03-06 17:30:03.210243", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2021-03-06 17:30:02.901889", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "statefulset.apps/kafka created", 
+        "stdout_lines": [
+            "statefulset.apps/kafka created"
+        ]
+    }
+}
+2021-03-06 17:30:03,331 p=1133 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-03-06 17:30:03,331 p=1133 u=vagrant n=ansible | 10.244.0.1                 : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

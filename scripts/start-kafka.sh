@@ -16,7 +16,7 @@ export KAFKA_HEAP_OPTS="
 "
 export KAFKA_OPTS="
 -Dzookeeper.client.secure=true
--Dzookeeper.ssl.keyStore.location=/certs/$HOSTNAME.jks
+-Dzookeeper.ssl.keyStore.location=/certs/$HOSTNAME.kafka.jks
 -Dzookeeper.ssl.keyStore.password=kafkapilot
 -Dzookeeper.ssl.trustStore.location=/certs/kafkaCA-trusted.jks
 -Dzookeeper.ssl.trustStore.password=kafkapilot
